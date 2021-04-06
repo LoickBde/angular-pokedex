@@ -5,7 +5,7 @@
   <p>Offset: {{ pagedPokemons.offset }}</p>
 
   <mat-nav-list>
-    <a mat-list-item *ngFor="let pokemon of pagedPokemons.data" routerLink="detail/{{ pokemon.id }}">
+    <a mat-list-item *ngFor="let pokemon of pagedPokemons.data" routerLink="../detail/{{ pokemon.id }}">
       <img matListAvatar src=" ../../../assets/img/sprites/{{ pokemon.id }}.png" alt="...">
       <p matLine>
         <span>{{pokemon.id}}. </span>

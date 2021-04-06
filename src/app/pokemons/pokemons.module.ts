@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PokemonsRoutingModule } from './pokemons-routing.module';
-import { PokedexComponent } from './pokedex/pokedex.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -12,7 +11,7 @@ import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.componen
 
 
 @NgModule({
-  declarations: [PokedexComponent, PokemonListComponent, PokemonDetailComponent],
+  declarations: [PokemonListComponent, PokemonDetailComponent],
   imports: [
     CommonModule,
     PokemonsRoutingModule,
