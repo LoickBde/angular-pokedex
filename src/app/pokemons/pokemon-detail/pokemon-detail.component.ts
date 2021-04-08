@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
+import { Location } from '@angular/common'
 import { PokemonDetail } from '../model/pokemon-detail.model';
 import { PokemonService } from '../services/pokemon.service';
 
@@ -20,7 +20,7 @@ export class PokemonDetailComponent implements OnInit {
     types: []
   }
 
-  constructor(private route: ActivatedRoute, private pokemonService: PokemonService) { }
+  constructor(private route: ActivatedRoute, private location: Location, private pokemonService: PokemonService) { }
 
   ngOnInit(): void {
     this.getPokemon();
@@ -39,6 +39,10 @@ export class PokemonDetailComponent implements OnInit {
     } else {
       return val.toString();
     }
+  }
+
+  public goback(): void {
+    this.location.back();
   }
 
 }
