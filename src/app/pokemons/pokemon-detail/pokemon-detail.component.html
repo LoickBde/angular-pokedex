@@ -1,9 +1,38 @@
 <h2>Détails</h2>
 <ng-container *ngIf="pokemonDetail.id >= 0">
-  <p>{{ pokemonDetail.id }}</p>
-  <p>{{ pokemonDetail.name }}</p>
-  <p>{{ pokemonDetail.description }}</p>
-  <p>{{ pokemonDetail.height }}</p>
-  <p>{{ pokemonDetail.weight }}</p>
-  <p>{{ pokemonDetail.types }}</p>
+  <mat-card class="pokemon-detail-card">
+    <mat-grid-list cols="2">
+      <mat-grid-tile>
+        <div class="centered">
+          <img mat-card-lg-image src=" ../../../assets/img/official-artwork/{{ pokemonDetail.id }}.png">
+          <p>No. {{ formatValue(pokemonDetail.id) }}</p>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="centered">
+          <mat-list>
+            <mat-list-item>
+              <p><b>{{ pokemonDetail.name }}</b></p>
+              <audio autoplay #cry>
+                <source src="../../../assets/audio/{{ pokemonDetail.id }}.mp3" type="audio/mpeg">
+              </audio>
+              <button mat-icon-button (click)="cry.play()">
+                <mat-icon>play_circle_outline</mat-icon>
+              </button>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-chip-list>
+                <mat-chip *ngFor="let type of pokemonDetail.types">{{ type }}</mat-chip>
+              </mat-chip-list>
+            </mat-list-item>
+            <mat-list-item><p>Taille: {{pokemonDetail.height }} m</p></mat-list-item>
+            <mat-list-item><p>Poids: {{pokemonDetail.weight }} kg</p></mat-list-item>
+           </mat-list>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2">
+        <p>{{ pokemonDetail.description }}</p>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card>
 </ng-container>

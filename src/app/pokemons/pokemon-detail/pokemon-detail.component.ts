@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { PokemonDetail } from '../model/pokemon-detail.model';
 import { PokemonService } from '../services/pokemon.service';
 
@@ -28,6 +29,16 @@ export class PokemonDetailComponent implements OnInit {
   private getPokemon(): void {
     const id: number = Number(this.route.snapshot.paramMap.get('id'));
     this.pokemonService.getPokemon(id).subscribe(result => this.pokemonDetail = result);
+  }
+
+  public formatValue(val: number): string {
+    if(val >= 0 && val < 10){
+      return "00" + val;
+    } else if(val >= 10 && val < 100){
+      return "0" + val;
+    } else {
+      return val.toString();
+    }
   }
 
 }
