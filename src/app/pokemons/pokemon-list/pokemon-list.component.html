@@ -1,4 +1,10 @@
-<ng-container *ngIf="pagedPokemons.data.length > 0">
+<ng-container *ngIf="pagedPokemons">
+  <form>
+    <mat-form-field class="search-input">
+      <mat-label>Id ou nom du pokémon</mat-label>
+      <input matInput placeholder="Ex. Pikachu ou 25" name="search" [(ngModel)]="searchTerm" (ngModelChange)="searchPokemons($event)">
+    </mat-form-field>
+  </form>
   <mat-nav-list class="pokemon-list" infiniteScroll [scrollWindow]="false" (scrolled)="onScroll()">
     <a mat-list-item *ngFor="let pokemon of pagedPokemons.data" (click)="onSelectedPokemon(pokemon.id)">
       <img matListAvatar src="assets/img/sprites/{{ pokemon.id }}.png">

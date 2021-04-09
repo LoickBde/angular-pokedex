@@ -12,7 +12,6 @@ import { PokemonService } from '../services/pokemon.service';
 export class PokemonDetailComponent implements OnInit {
 
   public pokemonDetail?: PokemonDetail;
-
   @Input() public pokemonId: number = 1;
 
   constructor(private route: ActivatedRoute, private location: Location, private pokemonService: PokemonService) { }
