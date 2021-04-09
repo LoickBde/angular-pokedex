@@ -1,0 +1,8 @@
+<mat-sidenav-container class="pokedex-container">
+  <mat-sidenav class="list-container" opened mode="side">
+    <pkmn-pokemon-list (pokemonIdEvent)="onSelectedPokemon($event)"></pkmn-pokemon-list>
+  </mat-sidenav>
+  <<mat-sidenav-content>
+    <pkmn-pokemon-detail [pokemonId]="pokemonId"></pkmn-pokemon-detail>
+  </mat-sidenav-content>
+</mat-sidenav-container>

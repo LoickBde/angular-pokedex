@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { PagedData } from '../model/paged-data.model';
 import { Pokemon } from '../model/pokemon.model';
 import { PokemonService } from '../services/pokemon.service';
@@ -18,6 +18,8 @@ export class PokemonListComponent implements OnInit {
     limit: -1,
     offset: -1
   };
+
+  @Output() pokemonIdEvent = new EventEmitter<number>();
 
   constructor(private pokemonService: PokemonService) { }
 
@@ -41,6 +43,10 @@ export class PokemonListComponent implements OnInit {
   public onScroll(): void {
     this.getPokemons(this.limitPokemons, this.pagedPokemons.offset+this.limitPokemons);
   }
+
+  public onSelectedPokemon(id :number): void {
+    this.pokemonIdEvent.emit(id);
+ }
 
   public getNextPokemons(): void {
     let offset: number;

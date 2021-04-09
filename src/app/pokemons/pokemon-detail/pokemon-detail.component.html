@@ -1,4 +1,4 @@
-<ng-container *ngIf="pokemonDetail.id >= 0">
+<ng-container *ngIf="pokemonDetail">
   <mat-card class="pokemon-detail-card">
     <mat-grid-list cols="2">
       <mat-grid-tile>
@@ -37,7 +37,3 @@
     </mat-grid-list>
   </mat-card>
 </ng-container>
-<button id="backButton" mat-raised-button color="primary" (click)="goback()">
-  <mat-icon inline="true">arrow_back</mat-icon>
-  Retour
-</button>

@@ -1,3 +1,8 @@
 .mat-button-base {
   margin: 8px 8px 8px 8px;
 }
+
+.pokemon-list {
+    height: calc(100% - 8px);
+    overflow-y: scroll;
+}
