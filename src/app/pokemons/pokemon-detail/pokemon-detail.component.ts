@@ -31,6 +31,7 @@ export class PokemonDetailComponent implements OnInit {
     this.pokemonService.getPokemon(id).subscribe(result => this.pokemonDetail = result);
   }
 
+  /**@deprecated utilsation du pipe */
   public formatValue(val: number): string {
     if(val >= 0 && val < 10){
       return "00" + val;

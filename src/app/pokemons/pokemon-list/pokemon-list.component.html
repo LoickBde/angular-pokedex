@@ -1,7 +1,7 @@
 <ng-container *ngIf="pagedPokemons.data.length > 0">
   <mat-nav-list infiniteScroll (scrolled)="onScroll()">
     <a mat-list-item *ngFor="let pokemon of pagedPokemons.data" routerLink="../detail/{{ pokemon.id }}">
-      <img matListAvatar src=" ../../../assets/img/sprites/{{ pokemon.id }}.png">
+      <img matListAvatar src="assets/img/sprites/{{ pokemon.id }}.png">
       <p matLine>
         <span>{{pokemon.id}}. </span>
         <span>{{pokemon.name}}</span>

@@ -4,8 +4,8 @@
       <mat-grid-tile>
         <div class="centered">
           <div>
-            <img src=" ../../../assets/img/official-artwork/{{ pokemonDetail.id }}.png">
-            <p>No. {{ formatValue(pokemonDetail.id) }}</p>
+            <img src="assets/img/official-artwork/{{ pokemonDetail.id }}.png">
+            <p>No. {{ pokemonDetail.id | number:'3.0-0' }}</p>
           </div>
         </div>
       </mat-grid-tile>
@@ -15,7 +15,7 @@
             <mat-list-item>
               <p><b>{{ pokemonDetail.name }}</b></p>
               <audio autoplay #cry>
-                <source src="../../../assets/audio/{{ pokemonDetail.id }}.mp3" type="audio/mpeg">
+                <source src="assets/audio/{{ pokemonDetail.id }}.mp3" type="audio/mpeg">
               </audio>
               <button mat-icon-button (click)="cry.play()">
                 <mat-icon>play_circle_outline</mat-icon>
