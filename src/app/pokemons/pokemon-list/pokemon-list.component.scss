@@ -3,11 +3,10 @@
 }
 
 .pokemon-list {
-    height: calc(100% - 8px - 57px - 40px);
+    height: calc(100% - 8px - 57px - 10px);
     overflow-y: scroll;
 }
 
-.search-input {
-  width: 80%;
-  margin: auto;
+#searchForm {
+  padding-left: 1em;
 }

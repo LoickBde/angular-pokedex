@@ -5,3 +5,8 @@
 .list-container {
   min-width: 15%;
 }
+
+#detail-container {
+  display: grid;
+  place-items: center;
+}

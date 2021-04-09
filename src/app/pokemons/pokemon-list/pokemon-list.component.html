@@ -1,5 +1,5 @@
 <ng-container *ngIf="pagedPokemons">
-  <form>
+  <form id="searchForm">
     <mat-form-field class="search-input">
       <mat-label>Id ou nom du pokémon</mat-label>
       <input matInput placeholder="Ex. Pikachu ou 25" name="search" [(ngModel)]="searchTerm" (ngModelChange)="searchPokemons($event)">

@@ -2,7 +2,7 @@
   <mat-sidenav class="list-container" opened mode="side">
     <pkmn-pokemon-list (pokemonIdEvent)="onSelectedPokemon($event)"></pkmn-pokemon-list>
   </mat-sidenav>
-  <<mat-sidenav-content>
+  <<mat-sidenav-content id="detail-container">
     <pkmn-pokemon-detail [pokemonId]="pokemonId"></pkmn-pokemon-detail>
   </mat-sidenav-content>
 </mat-sidenav-container>
