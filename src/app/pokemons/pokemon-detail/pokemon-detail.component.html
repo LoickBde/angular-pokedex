@@ -3,8 +3,10 @@
     <mat-grid-list cols="2">
       <mat-grid-tile>
         <div class="centered">
-          <img mat-card-lg-image src=" ../../../assets/img/official-artwork/{{ pokemonDetail.id }}.png">
-          <p>No. {{ formatValue(pokemonDetail.id) }}</p>
+          <div>
+            <img src=" ../../../assets/img/official-artwork/{{ pokemonDetail.id }}.png">
+            <p>No. {{ formatValue(pokemonDetail.id) }}</p>
+          </div>
         </div>
       </mat-grid-tile>
       <mat-grid-tile>
