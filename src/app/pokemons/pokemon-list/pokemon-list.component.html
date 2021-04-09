@@ -1,5 +1,5 @@
 <ng-container *ngIf="pagedPokemons.data.length > 0">
-  <mat-nav-list>
+  <mat-nav-list infiniteScroll (scrolled)="onScroll()">
     <a mat-list-item *ngFor="let pokemon of pagedPokemons.data" routerLink="../detail/{{ pokemon.id }}">
       <img matListAvatar src=" ../../../assets/img/sprites/{{ pokemon.id }}.png">
       <p matLine>
@@ -8,6 +8,4 @@
       </p>
     </a>
   </mat-nav-list>
-  <button mat-raised-button color="primary" [disabled]="pagedPokemons.offset<=0" (click)="getPreviousPokemons()">Prec.</button>
-  <button mat-raised-button color="primary" [disabled]="pagedPokemons.offset+pagedPokemons.limit>=pokemonGeneration" (click)="getNextPokemons()">Suiv.</button>
 </ng-container>

@@ -13,6 +13,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 
 @NgModule({
   declarations: [PokemonListComponent, PokemonDetailComponent],
@@ -25,7 +27,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatCardModule,
     MatGridListModule,
     MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    InfiniteScrollModule
   ],
   exports : []
 })
