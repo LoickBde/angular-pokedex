@@ -1,6 +1,4 @@
-<h2>Mon Pokedex</h2>
 <ng-container *ngIf="pagedPokemons.data.length > 0">
-
   <mat-nav-list>
     <a mat-list-item *ngFor="let pokemon of pagedPokemons.data" routerLink="../detail/{{ pokemon.id }}">
       <img matListAvatar src=" ../../../assets/img/sprites/{{ pokemon.id }}.png">
@@ -10,7 +8,6 @@
       </p>
     </a>
   </mat-nav-list>
-
   <button mat-raised-button color="primary" [disabled]="pagedPokemons.offset<=0" (click)="getPreviousPokemons()">Prec.</button>
   <button mat-raised-button color="primary" [disabled]="pagedPokemons.offset+pagedPokemons.limit>=pokemonGeneration" (click)="getNextPokemons()">Suiv.</button>
 </ng-container>
