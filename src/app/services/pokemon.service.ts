@@ -1,10 +1,10 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { PagedData } from '../model/paged-data.model';
-import { Pokemon } from '../model/pokemon.model';
+import { PagedData } from '../pokemons/model/paged-data.model';
+import { Pokemon } from '../pokemons/model/pokemon.model';
 import { catchError } from 'rxjs/operators';
-import { PokemonDetail } from '../model/pokemon-detail.model';
+import { PokemonDetail } from '../pokemons/model/pokemon-detail.model';
 
 @Injectable({
   providedIn: 'root'
