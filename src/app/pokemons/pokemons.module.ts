@@ -18,10 +18,11 @@ import { MatInputModule } from '@angular/material/input';
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { PokedexComponent } from './pokedex/pokedex.component';
+import { TeamComponent } from './team/team.component';
 
 
 @NgModule({
-  declarations: [PokemonListComponent, PokemonDetailComponent, PokedexComponent],
+  declarations: [PokemonListComponent, PokemonDetailComponent, PokedexComponent, TeamComponent],
   imports: [
     CommonModule,
     PokemonsRoutingModule,
