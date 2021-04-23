@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, SimpleChange } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common'
-import { PokemonDetail } from '../model/pokemon-detail.model';
+import { PokemonDetail } from '../../model/pokemon-detail.model';
 import { PokemonService } from '../../services/pokemon.service';
 
 @Component({
