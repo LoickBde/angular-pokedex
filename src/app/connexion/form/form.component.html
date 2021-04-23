@@ -1,0 +1,30 @@
+<div id="login-form-container">
+  <mat-card id="login-card">
+    <mat-card-title>Connectez vous avant d'accéder aux équipes !</mat-card-title>
+    <mat-card-content>
+      <form onsubmit="return false;">
+        <p>
+          <mat-form-field  class="input-full-width" appearance="standard">
+            <mat-label>Email</mat-label>
+            <input class="input-full-width" matInput type="text" name="email" placeholder="Email" [formControl]="formControlEmail" required>
+            <mat-error *ngIf="formControlEmail.invalid">{{ getEmailError() }}</mat-error>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field class="input-full-width" appearance="standard">
+            <mat-label>Mot de passe</mat-label>
+            <input matInput type="password" name="password" placeholder="Mot de passe" [formControl]="formControlPswd" required>
+            <mat-error *ngIf="formControlPswd.invalid">{{ getPswdError() }}</mat-error>
+          </mat-form-field>
+        </p>
+
+        <div class="button">
+          <button mat-raised-button color="primary" type='button' (click)="submitForm()" [disabled]="formControlEmail.invalid || formControlPswd.invalid">Connexion</button>
+        </div>
+        <mat-error *ngIf="loginError!=''"> {{ loginError }}</mat-error>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
